@@ -1,7 +1,11 @@
 # workers-url-shortener
 
 [![Commitizen Friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F0-vortex%2Fworkers-url-shortener.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2F0-vortex%2Fworkers-url-shortener?ref=badge_shield)
  [![License](https://img.shields.io/github/license/0-vortex/workers-url-shortener)](./LICENSE)
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F0-vortex%2Fworkers-url-shortener.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2F0-vortex%2Fworkers-url-shortener?ref=badge_large)
 
 ## Overview
 
