@@ -1,0 +1,59 @@
+{
+  "name": "workers-url-shortener",
+  "private": true,
+  "version": "1.0.0",
+  "authors": [
+    "TED Vortex <ted.vortex@gmail.com>"
+  ],
+  "homepage": "https://github.com/0-vortex/workers-url-shortener",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/0-vortex/workers-url-shortener.git"
+  },
+  "engines": {
+    "node": ">=14",
+    "npm": ">=6"
+  },
+  "license": "BSD-3-Clause",
+  "description": "TBD",
+  "keywords": [
+    "badges",
+    "badges-markdown",
+    "social",
+    "social-badges",
+    "markdown",
+    "markdown-badges",
+    "github",
+    "cloudflare",
+    "cloudflare-workers"
+  ],
+  "main": "src/index.js",
+  "scripts": {
+    "start": "wrangler dev",
+    "build": "wrangler build",
+    "deploy": "wrangler publish",
+    "format": "eslint ./src --fix --report-unused-disable-directives",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push": "cz"
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index --again"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

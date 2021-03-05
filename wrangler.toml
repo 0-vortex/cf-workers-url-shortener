@@ -1,0 +1,22 @@
+name = "url-shortener-dev"
+type = "javascript"
+account_id = "4ae2b0231430be3b4de63e32381d6513"
+zone_id = "af76b9090f6e819df8e36ba0d850b2fd"
+workers_dev = true
+kv_namespaces = [
+  { binding = "VORTEX_DOT_NAME", id = "0b8f93760c244cad97f10a6ab2cad9bb", preview_id = "8f35599f4d424d78b68117e8ed82dbed" }
+]
+
+[dev]
+ip = "0.0.0.0"
+port = 9000
+local_protocol="http"
+upstream_protocol="https"
+
+[env.production]
+name = "url-shortener"
+workers_dev = false
+route = "get-social-with.vortex.name"
+kv_namespaces = [
+  { binding = "VORTEX_DOT_NAME", id = "bee089bc49d342bfb9b019dbffc3e415", preview_id = "6d3f646d985d469685dbc306051951ab" }
+]
