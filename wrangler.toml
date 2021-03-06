@@ -4,7 +4,7 @@ account_id = "4ae2b0231430be3b4de63e32381d6513"
 zone_id = "af76b9090f6e819df8e36ba0d850b2fd"
 workers_dev = true
 kv_namespaces = [
-  { binding = "VORTEX_DOT_NAME", id = "0b8f93760c244cad97f10a6ab2cad9bb", preview_id = "8f35599f4d424d78b68117e8ed82dbed" }
+  { binding = "REDIRECTS", id = "a440b997322e4f74b64de848dee1d149", preview_id = "22e9d18085d44c049a481035df41c5b1" }
 ]
 
 [dev]
@@ -18,5 +18,5 @@ name = "url-shortener"
 workers_dev = false
 route = "get-social-with.vortex.name"
 kv_namespaces = [
-  { binding = "VORTEX_DOT_NAME", id = "bee089bc49d342bfb9b019dbffc3e415", preview_id = "6d3f646d985d469685dbc306051951ab" }
+  { binding = "REDIRECTS", id = "d6444b81e4be4991af05e9cbbe0b48f1", preview_id = "6a76c5899d914da5851e6f31a074692a" }
 ]

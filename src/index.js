@@ -8,7 +8,7 @@ const handleRequest = async request => {
 
       if (key !== '') {
         // eslint-disable-next-line
-        const redirectTo = new URL(await VORTEX_DOT_NAME.get(key));
+        const redirectTo = new URL(await REDIRECTS.get(key));
 
         if (redirectTo) {
           return Response.redirect(redirectTo, 301);

@@ -2,10 +2,18 @@
 
 [![Commitizen Friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
  [![License](https://img.shields.io/github/license/0-vortex/workers-url-shortener)](./LICENSE)
+ [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F0-vortex%2Fworkers-url-shortener.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2F0-vortex%2Fworkers-url-shortener?ref=badge_shield)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/26ea74df7c6fe2f18438/maintainability)](https://codeclimate.com/github/0-vortex/workers-url-shortener/maintainability)
+ [![Known Vulnerabilities](https://snyk.io/test/github/0-vortex/workers-url-shortener/badge.svg)](https://snyk.io/test/github/0-vortex/workers-url-shortener)
 
 ## Overview
 
-TBD 
+A Cloudflare Workers script to use as a simple redirect system.
+
+The [data.json](./src/data.json) file can be used as dummy input or ``git`` enabled backup for your production environment.
+
+The motivation for doing such a thing is GUI or IAM enabled acces to these variables from other CloudFlare tools, essentially promoting observability.
 
 ## Folder structure
 
@@ -88,6 +96,46 @@ gh repo clone  0-vortex/workers-url-shortener
 
 ## Usage
 
+### Configure KV
+
+To successfully run the redirect worker we need to set up some KV namespaces.
+
+Generate new `namespace_id`s for the KV keys it [wrangler.toml](./wrangler.toml) and follow the instructions:
+
+```shell
+# dev environment
+wrangler kv:namespace create "REDIRECTS"
+wrangler kv:namespace create "REDIRECTS" --preview
+```
+
+```shell
+# production environment
+wrangler kv:namespace create "REDIRECTS" --env production
+wrangler kv:namespace create "REDIRECTS" --env production --preview
+```
+
+After you are done editing check if the changes are correct:
+
+```shell
+wrangler kv:namespace list
+```
+
+### Test data
+
+Upload some data to the ``REDIRECTS`` namespace:
+
+```shell
+# dev environment
+wrangler kv:bulk put --binding="REDIRECTS" ./src/data.json
+wrangler kv:bulk put --binding="REDIRECTS" ./src/data.json --preview
+```
+
+```shell
+# production environment
+wrangler kv:bulk put --binding="REDIRECTS" ./src/data.json --env production
+wrangler kv:bulk put --binding="REDIRECTS" ./src/data.json --env production --preview
+```
+
 ### Local development
 
 To develop locally just run:
@@ -113,3 +161,5 @@ wrangler tail
 ## License
 
 This library is released under BSD-3 license clause.
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F0-vortex%2Fworkers-url-shortener.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2F0-vortex%2Fworkers-url-shortener?ref=badge_large)
