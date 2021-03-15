@@ -38,5 +38,9 @@
   {
     "key": "stackshare",
     "value": "https://stackshare.io/0_vortex"
+  },
+  {
+    "key": "wakatime",
+    "value": "https://wakatime.com/@vortex"
   }
 ]
