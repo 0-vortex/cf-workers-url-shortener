@@ -16,7 +16,7 @@ upstream_protocol="https"
 [env.production]
 name = "url-shortener"
 workers_dev = false
-route = "connect-with.vortex.name"
+route = "connect-with.vortex.name/*"
 kv_namespaces = [
   { binding = "REDIRECTS", id = "d6444b81e4be4991af05e9cbbe0b48f1", preview_id = "6a76c5899d914da5851e6f31a074692a" }
 ]
