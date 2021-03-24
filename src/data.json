@@ -20,6 +20,10 @@
     "value": "https://bitbucket.org/tedvortex"
   },
   {
+    "key": "gitlab",
+    "value": "https://gitlab.com/0-vortex"
+  },
+  {
     "key": "crunchbase",
     "value": "https://www.crunchbase.com/person/ted-vortex"
   },
@@ -42,5 +46,9 @@
   {
     "key": "wakatime",
     "value": "https://wakatime.com/@vortex"
+  },
+  {
+    "key": "dev",
+    "value": "https://dev.to/0vortex"
   }
 ]
