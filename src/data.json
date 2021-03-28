@@ -50,5 +50,9 @@
   {
     "key": "dev",
     "value": "https://dev.to/0vortex"
+  },
+  {
+    "key": "circles",
+    "value": "https://circles.garden/profile/0x1D3A171B73e8B682313C0b6598E3ce6bd0aDA1F6"
   }
 ]
