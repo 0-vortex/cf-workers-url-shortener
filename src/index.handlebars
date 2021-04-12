@@ -1,0 +1,149 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <meta name="theme-color" content="#000000">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link>
+  <style type="text/css" id="variables">
+    :root {
+      --color-background: {{background}};
+      --color-typography: {{typography}};
+      --color-primary: {{primary}};
+      --color-secondary: {{secondary}};
+      --border-radius: 4px;
+    }
+  </style>
+  <style type="text/css">
+    body {
+      background-color: var(--color-background);
+    }
+    #social {
+      width: 50vw;
+      padding: 0 25vw;
+      min-height: 100vh;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+      flex-grow: 0;
+      -ms-flex-negative: 1;
+      flex-shrink: 1;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    #social li {
+      display: inline-block;
+      margin: calc(2 * var(--border-radius));
+    }
+
+    #social a {
+      color: var(--color-typography);
+      display: inline-block;
+      line-height: 0;
+      border-radius: var(--border-radius);
+      position: relative;
+      background-color: var(--color-background);
+    }
+
+    #social a img {
+      /*-webkit-filter: invert(1);*/
+      /*filter: invert(1);*/
+      display: inline-block;
+      height: 80px;
+    }
+
+    #social a:hover {
+      background-color: transparent;
+    }
+
+    #social a:hover:after {
+      content: '';
+      position: absolute;
+      top: calc(-1 * var(--border-radius));
+      left: calc(-1 * var(--border-radius));
+      height: calc(100% + var(--border-radius) * 2);
+      width: calc(100% + var(--border-radius) * 2);
+      /*background: linear-gradient(60deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));*/
+      background: linear-gradient(60deg, rgba(24, 23, 23, 1), rgba(64, 63, 63, 1), rgba(24, 23, 23, 1));
+      border-radius: calc(2 * var(--border-radius));
+      z-index: -1;
+      animation: animatedgradient 3s ease alternate infinite;
+      background-size: 300% 300%;
+    }
+
+    @keyframes animatedgradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    {{#each brands}}
+    .svg-invert-{{this.className}} {
+      {{this.filter}};
+    }
+    {{/each}}
+  </style>
+</head>
+
+<body>
+<section id="social">
+  <ul>
+    {{#each links}}
+    <li>
+      <a href="{{this.value}}" title="Connect with {{../name}} on {{this.key}}">
+        <img alt="{{name}} on {{this.key}}"
+             {{#if this.color}}class="svg-invert-{{this.key}}"{{/if}}
+             src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.18.0/{{#if this.icon
+             }}{{this.icon}}{{else}}{{this.key}}{{/if}}.svg" />
+      </a>
+    </li>
+    {{/each}}
+  </ul>
+</section>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-{{analytics}}-Y', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'transport', 'beacon');
+  ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

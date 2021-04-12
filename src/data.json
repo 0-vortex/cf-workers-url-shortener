@@ -1,58 +1,70 @@
 [
   {
     "key": "lastfm",
-    "value": "https://www.last.fm/user/zero-vortex"
+    "value": "https://www.last.fm/user/zero-vortex",
+    "icon": "last-dot-fm",
+    "color": "#D51007"
   },
   {
     "key": "soundcloud",
-    "value": "https://soundcloud.com/vorteks"
+    "value": "https://soundcloud.com/vorteks",
+    "color": "#FF3300"
   },
   {
     "key": "twitter",
-    "value": "https://twitter.com/0_vortex"
+    "value": "https://twitter.com/0_vortex",
+    "color": "#1DA1F2"
   },
   {
     "key": "angel",
-    "value": "https://angel.co/u/vortex-1"
+    "value": "https://angel.co/u/vortex-1",
+    "icon": "angellist",
+    "color": "#d0d0d0"
   },
   {
     "key": "bitbucket",
-    "value": "https://bitbucket.org/tedvortex"
+    "value": "https://bitbucket.org/tedvortex",
+    "color": "#0052CC"
   },
   {
     "key": "gitlab",
-    "value": "https://gitlab.com/0-vortex"
+    "value": "https://gitlab.com/0-vortex",
+    "color": "#D51007"
   },
   {
     "key": "crunchbase",
-    "value": "https://www.crunchbase.com/person/ted-vortex"
+    "value": "https://www.crunchbase.com/person/ted-vortex",
+    "color": "#0288D1"
   },
   {
     "key": "github",
-    "value": "https://github.com/0-vortex"
+    "value": "https://github.com/0-vortex",
+    "color": "#d0d0d0"
   },
   {
     "key": "linkedin",
-    "value": "https://uk.linkedin.com/in/tedvortex"
+    "value": "https://uk.linkedin.com/in/tedvortex",
+    "color": "#0A66C2"
   },
   {
     "key": "stackoverflow",
-    "value": "http://stackoverflow.com/users/757375/vortex"
+    "value": "http://stackoverflow.com/users/757375/vortex",
+    "color": "#F58025"
   },
   {
     "key": "stackshare",
-    "value": "https://stackshare.io/0_vortex"
+    "value": "https://stackshare.io/0_vortex",
+    "color": "#0690FA"
   },
   {
     "key": "wakatime",
-    "value": "https://wakatime.com/@vortex"
+    "value": "https://wakatime.com/@vortex",
+    "color": "#d0d0d0"
   },
   {
     "key": "dev",
-    "value": "https://dev.to/0vortex"
-  },
-  {
-    "key": "circles",
-    "value": "https://circles.garden/profile/0x1D3A171B73e8B682313C0b6598E3ce6bd0aDA1F6"
+    "value": "https://dev.to/0vortex",
+    "icon": "dev-dot-to",
+    "color": "#d0d0d0"
   }
 ]
