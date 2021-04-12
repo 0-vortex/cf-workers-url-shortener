@@ -1,11 +1,12 @@
 name = "url-shortener-dev"
-type = "javascript"
+type = "webpack"
 account_id = "4ae2b0231430be3b4de63e32381d6513"
 zone_id = "af76b9090f6e819df8e36ba0d850b2fd"
 workers_dev = true
 kv_namespaces = [
   { binding = "REDIRECTS", id = "a440b997322e4f74b64de848dee1d149", preview_id = "22e9d18085d44c049a481035df41c5b1" }
 ]
+webpack_config = "webpack.config.js"
 
 [dev]
 ip = "0.0.0.0"
