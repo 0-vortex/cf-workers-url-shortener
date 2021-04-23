@@ -23,11 +23,113 @@
       --color-primary: {{primary}};
       --color-secondary: {{secondary}};
       --border-radius: 4px;
+      --icon-width: 80px;
+      --icon-height: 80px;
     }
   </style>
   <style type="text/css">
     body {
       background-color: var(--color-background);
+    }
+    @keyframes animeTwitch-anim-1 {
+      0% {
+        clip: rect(74px, 80px, 72px, 0);
+      }
+      6.6666666667% {
+        clip: rect(73px, 80px, 27px, 0);
+      }
+      13.3333333333% {
+        clip: rect(76px, 80px, 72px, 0);
+      }
+      20% {
+        clip: rect(59px, 80px, 9px, 0);
+      }
+      26.6666666667% {
+        clip: rect(9px, 80px, 11px, 0);
+      }
+      33.3333333333% {
+        clip: rect(48px, 80px, 28px, 0);
+      }
+      40% {
+        clip: rect(19px, 80px, 70px, 0);
+      }
+      46.6666666667% {
+        clip: rect(11px, 80px, 58px, 0);
+      }
+      53.3333333333% {
+        clip: rect(46px, 80px, 13px, 0);
+      }
+      60% {
+        clip: rect(11px, 80px, 72px, 0);
+      }
+      66.6666666667% {
+        clip: rect(39px, 80px, 69px, 0);
+      }
+      73.3333333333% {
+        clip: rect(36px, 80px, 54px, 0);
+      }
+      80% {
+        clip: rect(10px, 80px, 28px, 0);
+      }
+      86.6666666667% {
+        clip: rect(56px, 80px, 10px, 0);
+      }
+      93.3333333333% {
+        clip: rect(77px, 80px, 44px, 0);
+      }
+      100% {
+        clip: rect(58px, 80px, 69px, 0);
+      }
+    }
+    @keyframes animeTwitch-anim-2 {
+      0% {
+        clip: rect(60px, 80px, 11px, 0);
+      }
+      6.6666666667% {
+        clip: rect(78px, 80px, 17px, 0);
+      }
+      13.3333333333% {
+        clip: rect(6px, 80px, 32px, 0);
+      }
+      20% {
+        clip: rect(24px, 80px, 79px, 0);
+      }
+      26.6666666667% {
+        clip: rect(15px, 80px, 18px, 0);
+      }
+      33.3333333333% {
+        clip: rect(64px, 80px, 15px, 0);
+      }
+      40% {
+        clip: rect(36px, 80px, 64px, 0);
+      }
+      46.6666666667% {
+        clip: rect(74px, 80px, 51px, 0);
+      }
+      53.3333333333% {
+        clip: rect(77px, 80px, 45px, 0);
+      }
+      60% {
+        clip: rect(9px, 80px, 29px, 0);
+      }
+      66.6666666667% {
+        clip: rect(18px, 80px, 72px, 0);
+      }
+      73.3333333333% {
+        clip: rect(41px, 80px, 64px, 0);
+      }
+      80% {
+        clip: rect(76px, 80px, 44px, 0);
+      }
+      86.6666666667% {
+        clip: rect(46px, 80px, 65px, 0);
+      }
+      93.3333333333% {
+        clip: rect(39px, 80px, 66px, 0);
+      }
+      100% {
+        clip: rect(73px, 80px, 39px, 0);
+      }
     }
     #social {
       width: 50vw;
@@ -61,6 +163,7 @@
     }
 
     #social a {
+      text-decoration: none;
       color: var(--color-typography);
       display: inline-block;
       line-height: 0;
@@ -70,46 +173,43 @@
     }
 
     #social a img {
-      /*-webkit-filter: invert(1);*/
-      /*filter: invert(1);*/
       display: inline-block;
-      height: 80px;
+      position: relative;
+      width: var(--icon-width);
+      height: var(--icon-height);
+      -webkit-filter: invert(1);
+      filter: invert(1);
+    }
+
+    #social a img:nth-child(2),
+    #social a img:nth-child(3) {
+      position: absolute;
+      top: 0;
+      clip: rect(0, 0, 0, 0);
+    }
+
+    #social a img:nth-child(2) {
+      left: 2px;
+      animation: animeTwitch-anim-1 2s infinite linear alternate-reverse;
+    }
+
+    #social a img:nth-child(3) {
+      left: -2px;
+      animation: animeTwitch-anim-2 3s infinite linear alternate-reverse;
     }
 
     #social a:hover {
-      background-color: transparent;
+      cursor: pointer;
     }
 
-    #social a:hover:after {
-      content: '';
-      position: absolute;
-      top: calc(-1 * var(--border-radius));
-      left: calc(-1 * var(--border-radius));
-      height: calc(100% + var(--border-radius) * 2);
-      width: calc(100% + var(--border-radius) * 2);
-      /*background: linear-gradient(60deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));*/
-      background: linear-gradient(60deg, rgba(24, 23, 23, 1), rgba(64, 63, 63, 1), rgba(24, 23, 23, 1));
-      border-radius: calc(2 * var(--border-radius));
-      z-index: -1;
-      animation: animatedgradient 3s ease alternate infinite;
-      background-size: 300% 300%;
-    }
-
-    @keyframes animatedgradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
+    #social a:hover img {
+      cursor: pointer;
     }
 
     {{#each brands}}
-    .svg-invert-{{this.className}} {
-      {{this.filter}};
+    #social a:hover img.brand-{{this.className}} {
+      -webkit-filter: {{this.filter}};
+      filter: {{this.filter}};
     }
     {{/each}}
   </style>
@@ -121,8 +221,16 @@
     {{#each links}}
     <li>
       <a href="{{this.value}}" title="Connect with {{../name}} on {{this.key}}">
-        <img alt="{{name}} on {{this.key}}"
-             {{#if this.color}}class="svg-invert-{{this.key}}"{{/if}}
+        <img alt="{{name}} on {{this.key}} brand color"
+             {{#if this.color}}class="brand-{{this.key}}"{{/if}}
+             src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.18.0/{{#if this.icon
+             }}{{this.icon}}{{else}}{{this.key}}{{/if}}.svg" />
+        <img alt="{{name}} on {{this.key}} mono"
+             class="mono"
+             src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.18.0/{{#if this.icon
+             }}{{this.icon}}{{else}}{{this.key}}{{/if}}.svg" />
+        <img alt="{{name}} on {{this.key}} mono"
+             class="mono"
              src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.18.0/{{#if this.icon
              }}{{this.icon}}{{else}}{{this.key}}{{/if}}.svg" />
       </a>

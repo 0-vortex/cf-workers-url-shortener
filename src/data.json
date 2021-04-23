@@ -1,24 +1,7 @@
 [
   {
-    "key": "lastfm",
-    "value": "https://www.last.fm/user/zero-vortex",
-    "icon": "last-dot-fm",
-    "color": "#D51007"
-  },
-  {
-    "key": "soundcloud",
-    "value": "https://soundcloud.com/vorteks",
-    "color": "#FF3300"
-  },
-  {
-    "key": "twitter",
-    "value": "https://twitter.com/0_vortex",
-    "color": "#1DA1F2"
-  },
-  {
-    "key": "angel",
-    "value": "https://angel.co/u/vortex-1",
-    "icon": "angellist",
+    "key": "github",
+    "value": "https://github.com/0-vortex",
     "color": "#d0d0d0"
   },
   {
@@ -30,21 +13,6 @@
     "key": "gitlab",
     "value": "https://gitlab.com/0-vortex",
     "color": "#D51007"
-  },
-  {
-    "key": "crunchbase",
-    "value": "https://www.crunchbase.com/person/ted-vortex",
-    "color": "#0288D1"
-  },
-  {
-    "key": "github",
-    "value": "https://github.com/0-vortex",
-    "color": "#d0d0d0"
-  },
-  {
-    "key": "linkedin",
-    "value": "https://uk.linkedin.com/in/tedvortex",
-    "color": "#0A66C2"
   },
   {
     "key": "stackoverflow",
@@ -62,9 +30,107 @@
     "color": "#d0d0d0"
   },
   {
+    "key": "linkedin",
+    "value": "https://uk.linkedin.com/in/tedvortex",
+    "color": "#0A66C2"
+  },
+  {
+    "key": "angel",
+    "value": "https://angel.co/u/vortex-1",
+    "icon": "angellist",
+    "color": "#d0d0d0"
+  },
+  {
+    "key": "twitter",
+    "value": "https://twitter.com/0_vortex",
+    "color": "#1DA1F2"
+  },
+  {
     "key": "dev",
     "value": "https://dev.to/0vortex",
     "icon": "dev-dot-to",
     "color": "#d0d0d0"
+  },
+  {
+    "key": "crunchbase",
+    "value": "https://www.crunchbase.com/person/ted-vortex",
+    "color": "#0288D1"
+  },
+  {
+    "key": "keybase",
+    "value": "https://keybase.io/0_vortex",
+    "color": "#33A0FF"
+  },
+  {
+    "key": "slack",
+    "value": "https://join.slack.com/t/tiamat-group/shared_invite/zt-mw4woays-miD2dly_7_EzPeJToA6eYw",
+    "color": "#4A154B"
+  },
+  {
+    "key": "discord",
+    "value": "https://discord.gg/pzcDK2YqMP",
+    "color": "#7289DA"
+  },
+  {
+    "key": "telegram",
+    "value": "https://t.me/vortex_0",
+    "color": "#26A5E4"
+  },
+  {
+    "key": "whatsapp",
+    "value": "https://wa.me/40754345624?text=hello.world",
+    "color": "#25D366"
+  },
+  {
+    "key": "skype",
+    "value": "https://discord.gg/pzcDK2YqMP",
+    "color": "#00AFF0"
+  },
+  {
+    "key": "battlenet",
+    "value": "https://eu.diablo3.com/en-us/profile/vortex-2239",
+    "icon": "battle-dot-net",
+    "color": "#00AEFF"
+  },
+  {
+    "key": "reddit",
+    "value": "https://www.reddit.com/user/vrtxf",
+    "color": "#FF4500"
+  },
+  {
+    "key": "twitch",
+    "value": "https://www.twitch.tv/minusonevortex",
+    "color": "#9146FF"
+  },
+  {
+    "key": "lastfm",
+    "value": "https://www.last.fm/user/zero-vortex",
+    "icon": "last-dot-fm",
+    "color": "#D51007"
+  },
+  {
+    "key": "soundcloud",
+    "value": "https://soundcloud.com/vorteks",
+    "color": "#FF3300"
+  },
+  {
+    "key": "revolut",
+    "value": "https://revolut.me/vortex",
+    "color": "#0075EB"
+  },
+  {
+    "key": "paypal",
+    "value": "https://paypal.me/TeodorDutulescu",
+    "color": "#00457C"
+  },
+  {
+    "key": "ko-fi",
+    "value": "https://ko-fi.com/0vortex",
+    "color": "#FF5E5B"
+  },
+  {
+    "key": "liberapay",
+    "value": "https://liberapay.com/ted.vortex",
+    "color": "#F6C915"
   }
 ]
