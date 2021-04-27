@@ -34,4 +34,10 @@ kv_namespaces = [
 ]
 
 [env.production.vars]
+NAME = "TED Vortex"
 GA = "123456"
+BG = "rgba(24,23,23,1)"
+SIZE = "80px"
+GAP = "2px"
+MARGIN = "4px"
+DURATION = "2.25"
