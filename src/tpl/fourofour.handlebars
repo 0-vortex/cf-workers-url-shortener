@@ -1,0 +1,134 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <meta name="theme-color" content="#000000">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
+  <style type="text/css" id="variables">
+    :root {
+      --color-background: {{background}};
+    }
+  </style>
+  <style type="text/css">
+    html {
+      background-color: var(--color-background);
+      height: 100%;
+      color: #969696;
+      font-family: Lato, Lucida Grande, Lucida Sans Unicode, Tahoma, sans-serif;
+    }
+
+    body {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .error-banner {
+      z-index: 1;
+      position: relative;
+      text-align: center;
+      transform: translate3d(0, 0, 0);
+    }
+    .error-banner .error-404 {
+      margin: 112px auto 2em;
+      padding-left: 160px;
+      display: inline-block;
+      height: 112px;
+      background-position: top left;
+      -webkit-animation: 0.5s ease-in-out fade-slide-left;
+      animation: 0.5s ease-in-out fade-slide-left;
+    }
+    .error-banner .error-404, .error-banner .error-404:before, .error-banner .error-404:after {
+      display: inline-block;
+      position: relative;
+      background-repeat: no-repeat;
+      content: "";
+    }
+    .error-banner .error-404:before, .error-banner .error-404:after {
+      width: 160px;
+      height: 112px;
+    }
+    .error-banner .error-404:before {
+      top: -38.6206896552px;
+      margin-left: -90px;
+      z-index: -1;
+      background-position: top left;
+      -webkit-animation: 1s ease-in-out fade-slide-left;
+      animation: 1s ease-in-out fade-slide-left;
+    }
+    .error-banner .error-404:after {
+      top: -77.2413793103px;
+      margin-left: -90px;
+      z-index: -10;
+      background-position: top left;
+      -webkit-animation: 1.5s ease-in-out fade-slide-left;
+      animation: 1.5s ease-in-out fade-slide-left;
+    }
+    .error-banner .error-404 {
+      background-image: url('data:image/svg+xml;utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="159.8" height="89.5" viewBox="0 0 159.8 89.5"%3E%3Cpath fill="%231d2125" d="M60 0L40 11.2V33.6L20 22.4 0 33.6v22.3l60 33.6 39.9-22.3 39.9 22.3 20-11.2V56z"/%3E%3Cpath fill="%23969696" d="M60 5.2l-15.3 8.5L60 22.3l15.3-8.6L60 5.2M20 27.6L4.7 36.2 20 44.7l15.3-8.6L20 27.6M40 38.8l-15.3 8.5L40 55.9l15.3-8.6L40 38.8M79.9 16.4L64.6 25l15.3 8.6L95.1 25l-15.2-8.6M99.9 27.6l-15.3 8.5 15.3 8.6 15.3-8.6-15.3-8.5M80 38.9l-15.3 8.5L80 56l15.3-8.6L80 38.9M119.9 38.9l-15.3 8.5 15.3 8.6 15.3-8.6-15.3-8.5M60 50l-15.3 8.5L60 67.1l15.3-8.6L60 50M139.8 50l-15.3 8.5 15.3 8.6 15.3-8.6-15.3-8.5"/%3E%3C/svg%3E');
+    }
+    .error-banner .error-404:before {
+      background-image: url('data:image/svg+xml;utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="159.8" height="111.8" viewBox="0 0 159.8 111.8"%3E%3Cpath fill="%231d2125" d="M60 0L0 33.6v22.3l99.9 55.9 59.9-33.5V56z"/%3E%3Cpath fill="%23969696" d="M60 5.2l-15.3 8.5L60 22.3l15.3-8.6L60 5.2M40 16.5L24.7 25 40 33.5 55.3 25 40 16.5M20 27.6L4.7 36.2 20 44.7l15.3-8.6L20 27.6M40 38.8l-15.3 8.5L40 55.9l15.3-8.6L40 38.8M79.9 16.4L64.6 25l15.3 8.6L95.1 25l-15.2-8.6M99.9 27.6l-15.3 8.5 15.3 8.6 15.3-8.6-15.3-8.5M119.9 38.9l-15.3 8.5 15.3 8.6 15.3-8.6-15.3-8.5M60 50l-15.3 8.5L60 67.1l15.3-8.6L60 50M80 61.2l-15.3 8.5L80 78.3l15.3-8.6L80 61.2M139.8 50l-15.3 8.5 15.3 8.6 15.3-8.6-15.3-8.5M119.8 61.2l-15.3 8.5 15.3 8.6 15.3-8.6-15.3-8.5M99.9 72.4l-15.3 8.5 15.3 8.6 15.3-8.6-15.3-8.5"/%3E%3C/svg%3E');
+    }
+    .error-banner .error-404:after {
+      background-image: url('data:image/svg+xml;utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="159.8" height="89.5" viewBox="0 0 159.8 89.5"%3E%3Cpath fill="%231d2125" d="M60 0L40 11.2V33.6L20 22.4 0 33.6v22.3l60 33.6 39.9-22.3 39.9 22.3 20-11.2V56z"/%3E%3Cpath fill="%23969696" d="M60 5.2l-15.3 8.5L60 22.3l15.3-8.6L60 5.2M20 27.6L4.7 36.2 20 44.7l15.3-8.6L20 27.6M40 38.8l-15.3 8.5L40 55.9l15.3-8.6L40 38.8M79.9 16.4L64.6 25l15.3 8.6L95.1 25l-15.2-8.6M99.9 27.6l-15.3 8.5 15.3 8.6 15.3-8.6-15.3-8.5M80 38.9l-15.3 8.5L80 56l15.3-8.6L80 38.9M119.9 38.9l-15.3 8.5 15.3 8.6 15.3-8.6-15.3-8.5M60 50l-15.3 8.5L60 67.1l15.3-8.6L60 50M139.8 50l-15.3 8.5 15.3 8.6 15.3-8.6-15.3-8.5"/%3E%3C/svg%3E');
+    }
+
+    .title {
+      width: 50vw;
+      margin: auto;
+      text-align: center;
+    }
+
+    @-webkit-keyframes fade-slide-left {
+      0% {
+        opacity: 0;
+        transform: translate(28px, 15px);
+      }
+      50% {
+        opacity: 0;
+        transform: translate(28px, 15px);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+
+    @keyframes fade-slide-left {
+      0% {
+        opacity: 0;
+        transform: translate(28px, 15px);
+      }
+      50% {
+        opacity: 0;
+        transform: translate(28px, 15px);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+<section class="error-banner">
+  <div class="error-404"></div>
+</section>
+<h1 class="title">redirect with key "{{key}}" not found</h1>
+
+</body>
+
+</html>

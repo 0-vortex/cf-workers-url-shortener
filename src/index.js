@@ -1,15 +1,14 @@
-import index from './index.handlebars';
+import index from './tpl/index.handlebars';
+import fourofour from './tpl/fourofour.handlebars';
 import links from './data.json';
 import {Color, Solver, hexToRgb} from './util';
 
-const UnexpectedError = new Error('Please provide a source');
-
 const handleRequest = async request => {
   if (request.method === 'GET') {
-    try {
-      const {pathname} = new URL(request.url || '', `https://${request.headers.host}`);
-      const key = pathname.replace(/^\//, '');
+    const {pathname} = new URL(request.url || '', `https://${request.headers.host}`);
+    const key = pathname.replace(/^\//, '');
 
+    try {
       if (key !== '') {
         // eslint-disable-next-line
         const redirectTo = new URL(await REDIRECTS.get(key));
@@ -53,10 +52,16 @@ const handleRequest = async request => {
         });
       }
     } catch (e) {
-      UnexpectedError.message = 'Key not found';
+      return new Response(fourofour({
+        background: BG,
+        key,
+      }), {
+        headers: {
+          'content-type': 'text/html;charset=UTF-8',
+        },
+        status: 404,
+      });
     }
-
-    return new Response(UnexpectedError, {status: 404});
   }
 };
 
