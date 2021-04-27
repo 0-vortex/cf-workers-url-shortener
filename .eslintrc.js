@@ -1,12 +1,18 @@
 module.exports = {
   globals: {
-    __PATH_PREFIX__: true,
-    USER: true,
-    API_KEY: true,
+    addEventListener: true,
+    Response: true,
+    NAME: true,
+    GA: true,
+    BG: true,
+    SIZE: true,
+    GAP: true,
+    MARGIN: true,
+    DURATION: true,
   },
   ignorePatterns: ['dist/*', 'worker/*'],
   extends: [
-    'airbnb',
+    'airbnb-base/legacy',
   ],
   env: {
     node: true,
@@ -15,6 +21,7 @@ module.exports = {
     browser: true,
   },
   parserOptions: {
+    sourceType: 'module',
     ecmaFeatures: {
       globalReturn: true,
       impliedStrict: true,
@@ -43,7 +50,6 @@ module.exports = {
     'object-property-newline': 2,
     'no-param-reassign': 0,
     'consistent-return': 0,
-    'import/prefer-default-export': [1],
-    'no-restricted-globals': 0
+    'no-restricted-globals': 0,
   },
 };

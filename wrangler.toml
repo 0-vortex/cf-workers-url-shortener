@@ -8,6 +8,15 @@ kv_namespaces = [
 ]
 webpack_config = "webpack.config.js"
 
+[vars]
+NAME = "TED Vortex"
+GA = ""
+BG = "rgba(24,23,23,1)"
+SIZE = "80px"
+GAP = "2px"
+MARGIN = "4px"
+DURATION = "2.25"
+
 [dev]
 ip = "0.0.0.0"
 port = 9000
@@ -23,3 +32,6 @@ routes = [
 kv_namespaces = [
   { binding = "REDIRECTS", id = "d6444b81e4be4991af05e9cbbe0b48f1", preview_id = "6a76c5899d914da5851e6f31a074692a" }
 ]
+
+[env.production.vars]
+GA = "123456"
