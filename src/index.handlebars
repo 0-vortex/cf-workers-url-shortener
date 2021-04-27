@@ -19,118 +19,203 @@
   <style type="text/css" id="variables">
     :root {
       --color-background: {{background}};
-      --color-typography: {{typography}};
-      --color-primary: {{primary}};
-      --color-secondary: {{secondary}};
-      --border-radius: 4px;
-      --icon-width: 80px;
-      --icon-height: 80px;
+      --icon-horizontal: {{size}};
+      --icon-vertical: {{size}};
+      --margin-horizontal: {{margin}};
+      --margin-vertical: {{margin}};
+      --gap-horizontal: {{gap}};
+      --gap-vertical: {{gap}};
+      --time-anim: {{duration}}s;
     }
   </style>
   <style type="text/css">
     body {
       background-color: var(--color-background);
     }
-    @keyframes animeTwitch-anim-1 {
+    @keyframes glitch-anim-1-horizontal {
       0% {
-        clip: rect(74px, 80px, 72px, 0);
+        -webkit-clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
+        clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
       }
-      6.6666666667% {
-        clip: rect(73px, 80px, 27px, 0);
-      }
-      13.3333333333% {
-        clip: rect(76px, 80px, 72px, 0);
+      10% {
+        -webkit-clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
+        clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
       }
       20% {
-        clip: rect(59px, 80px, 9px, 0);
+        -webkit-clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
+        clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
       }
-      26.6666666667% {
-        clip: rect(9px, 80px, 11px, 0);
-      }
-      33.3333333333% {
-        clip: rect(48px, 80px, 28px, 0);
+      30% {
+        -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
+        clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
       }
       40% {
-        clip: rect(19px, 80px, 70px, 0);
+        -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+        clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
       }
-      46.6666666667% {
-        clip: rect(11px, 80px, 58px, 0);
-      }
-      53.3333333333% {
-        clip: rect(46px, 80px, 13px, 0);
+      50% {
+        -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+        clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
       }
       60% {
-        clip: rect(11px, 80px, 72px, 0);
+        -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+        clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
       }
-      66.6666666667% {
-        clip: rect(39px, 80px, 69px, 0);
-      }
-      73.3333333333% {
-        clip: rect(36px, 80px, 54px, 0);
+      70% {
+        -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+        clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
       }
       80% {
-        clip: rect(10px, 80px, 28px, 0);
+        -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+        clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
       }
-      86.6666666667% {
-        clip: rect(56px, 80px, 10px, 0);
-      }
-      93.3333333333% {
-        clip: rect(77px, 80px, 44px, 0);
+      90% {
+        -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+        clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
       }
       100% {
-        clip: rect(58px, 80px, 69px, 0);
+        -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+        clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
       }
     }
-    @keyframes animeTwitch-anim-2 {
+
+    @keyframes glitch-anim-2-horizontal {
       0% {
-        clip: rect(60px, 80px, 11px, 0);
+        -webkit-clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%);
+        clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%);
       }
-      6.6666666667% {
-        clip: rect(78px, 80px, 17px, 0);
+      15% {
+        -webkit-clip-path: polygon(0 3%, 100% 3%, 100% 3%, 0 3%);
+        clip-path: polygon(0 3%, 100% 3%, 100% 3%, 0 3%);
       }
-      13.3333333333% {
-        clip: rect(6px, 80px, 32px, 0);
+      22% {
+        -webkit-clip-path: polygon(0 5%, 100% 5%, 100% 20%, 0 20%);
+        clip-path: polygon(0 5%, 100% 5%, 100% 20%, 0 20%);
       }
-      20% {
-        clip: rect(24px, 80px, 79px, 0);
+      31% {
+        -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+        clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
       }
-      26.6666666667% {
-        clip: rect(15px, 80px, 18px, 0);
+      45% {
+        -webkit-clip-path: polygon(0 40%, 100% 40%, 100% 40%, 0 40%);
+        clip-path: polygon(0 40%, 100% 40%, 100% 40%, 0 40%);
       }
-      33.3333333333% {
-        clip: rect(64px, 80px, 15px, 0);
+      51% {
+        -webkit-clip-path: polygon(0 52%, 100% 52%, 100% 59%, 0 59%);
+        clip-path: polygon(0 52%, 100% 52%, 100% 59%, 0 59%);
       }
-      40% {
-        clip: rect(36px, 80px, 64px, 0);
+      63% {
+        -webkit-clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+        clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
       }
-      46.6666666667% {
-        clip: rect(74px, 80px, 51px, 0);
+      76% {
+        -webkit-clip-path: polygon(0 75%, 100% 75%, 100% 75%, 0 75%);
+        clip-path: polygon(0 75%, 100% 75%, 100% 75%, 0 75%);
       }
-      53.3333333333% {
-        clip: rect(77px, 80px, 45px, 0);
+      81% {
+        -webkit-clip-path: polygon(0 65%, 100% 65%, 100% 40%, 0 40%);
+        clip-path: polygon(0 65%, 100% 65%, 100% 40%, 0 40%);
       }
-      60% {
-        clip: rect(9px, 80px, 29px, 0);
-      }
-      66.6666666667% {
-        clip: rect(18px, 80px, 72px, 0);
-      }
-      73.3333333333% {
-        clip: rect(41px, 80px, 64px, 0);
-      }
-      80% {
-        clip: rect(76px, 80px, 44px, 0);
-      }
-      86.6666666667% {
-        clip: rect(46px, 80px, 65px, 0);
-      }
-      93.3333333333% {
-        clip: rect(39px, 80px, 66px, 0);
+      94% {
+        -webkit-clip-path: polygon(0 45%, 100% 45%, 100% 50%, 0 50%);
+        clip-path: polygon(0 45%, 100% 45%, 100% 50%, 0 50%);
       }
       100% {
-        clip: rect(73px, 80px, 39px, 0);
+        -webkit-clip-path: polygon(0 14%, 100% 14%, 100% 33%, 0 33%);
+        clip-path: polygon(0 14%, 100% 14%, 100% 33%, 0 33%);
       }
     }
+
+    @keyframes glitch-anim-3-horizontal {
+      0% {
+        -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
+        clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
+      }
+      5% {
+        -webkit-clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%);
+        clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%);
+      }
+      10% {
+        -webkit-clip-path: polygon(0 5%, 100% 5%, 100% 6%, 0 6%);
+        clip-path: polygon(0 5%, 100% 5%, 100% 6%, 0 6%);
+      }
+      25% {
+        -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+        clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+      }
+      27% {
+        -webkit-clip-path: polygon(0 10%, 100% 10%, 100% 10%, 0 10%);
+        clip-path: polygon(0 10%, 100% 10%, 100% 10%, 0 10%);
+      }
+      30% {
+        -webkit-clip-path: polygon(0 30%, 100% 30%, 100% 25%, 0 25%);
+        clip-path: polygon(0 30%, 100% 30%, 100% 25%, 0 25%);
+      }
+      33% {
+        -webkit-clip-path: polygon(0 15%, 100% 15%, 100% 16%, 0 16%);
+        clip-path: polygon(0 15%, 100% 15%, 100% 16%, 0 16%);
+      }
+      37% {
+        -webkit-clip-path: polygon(0 40%, 100% 40%, 100% 39%, 0 39%);
+        clip-path: polygon(0 40%, 100% 40%, 100% 39%, 0 39%);
+      }
+      40% {
+        -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+        clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+      }
+      45% {
+        -webkit-clip-path: polygon(0 60%, 100% 60%, 100% 55%, 0 55%);
+        clip-path: polygon(0 60%, 100% 60%, 100% 55%, 0 55%);
+      }
+      50% {
+        -webkit-clip-path: polygon(0 30%, 100% 30%, 100% 31%, 0 31%);
+        clip-path: polygon(0 30%, 100% 30%, 100% 31%, 0 31%);
+      }
+      53% {
+        -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 69%, 0 69%);
+        clip-path: polygon(0 70%, 100% 70%, 100% 69%, 0 69%);
+      }
+      57% {
+        -webkit-clip-path: polygon(0 40%, 100% 40%, 100% 41%, 0 41%);
+        clip-path: polygon(0 40%, 100% 40%, 100% 41%, 0 41%);
+      }
+      60% {
+        -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 75%, 0 75%);
+        clip-path: polygon(0 80%, 100% 80%, 100% 75%, 0 75%);
+      }
+      65% {
+        -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 51%, 0 51%);
+        clip-path: polygon(0 50%, 100% 50%, 100% 51%, 0 51%);
+      }
+      70% {
+        -webkit-clip-path: polygon(0 90%, 100% 90%, 100% 90%, 0 90%);
+        clip-path: polygon(0 90%, 100% 90%, 100% 90%, 0 90%);
+      }
+      73% {
+        -webkit-clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+        clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+      }
+      80% {
+        -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 99%, 0 99%);
+        clip-path: polygon(0 100%, 100% 100%, 100% 99%, 0 99%);
+      }
+      100% {
+        -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 71%, 0 71%);
+        clip-path: polygon(0 70%, 100% 70%, 100% 71%, 0 71%);
+      }
+    }
+
+    @keyframes glitch-anim-flash {
+      0% {
+        opacity: 0.4;
+        transform: translate3d(var(--gap-horizontal), var(--gap-vertical), 0);
+      }
+      33%, 100% {
+        opacity: 0;
+        transform: translate3d(0,0,0);
+      }
+    }
+
     #social {
       width: 50vw;
       padding: 0 25vw;
@@ -159,55 +244,62 @@
 
     #social li {
       display: inline-block;
-      margin: calc(2 * var(--border-radius));
+      margin: var(--margin-vertical) calc(2 * var(--margin-horizontal));
     }
 
     #social a {
       text-decoration: none;
-      color: var(--color-typography);
       display: inline-block;
       line-height: 0;
-      border-radius: var(--border-radius);
       position: relative;
-      background-color: var(--color-background);
     }
 
     #social a img {
       display: inline-block;
       position: relative;
-      width: var(--icon-width);
-      height: var(--icon-height);
+      width: var(--icon-horizontal);
+      height: var(--icon-vertical);
       -webkit-filter: invert(1);
       filter: invert(1);
     }
 
-    #social a img:nth-child(2),
-    #social a img:nth-child(3) {
+    #social a img:nth-child(n+2) {
+      opacity: 0;
       position: absolute;
       top: 0;
-      clip: rect(0, 0, 0, 0);
-    }
-
-    #social a img:nth-child(2) {
-      left: 2px;
-      animation: animeTwitch-anim-1 2s infinite linear alternate-reverse;
-    }
-
-    #social a img:nth-child(3) {
-      left: -2px;
-      animation: animeTwitch-anim-2 3s infinite linear alternate-reverse;
+      left: 0;
     }
 
     #social a:hover {
       cursor: pointer;
     }
 
-    #social a:hover img {
-      cursor: pointer;
+    #social a:hover img:nth-child(n+2) {
+      opacity: 1;
+    }
+
+    #social a:hover img:nth-child(2) {
+      transform: translate3d(var(--gap-horizontal),0,0);
+      animation: glitch-anim-1-horizontal var(--time-anim) infinite linear alternate;
+    }
+
+    #social a:hover img:nth-child(3) {
+      transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0);
+      animation: glitch-anim-2-horizontal var(--time-anim) infinite linear alternate;
+    }
+
+    #social a:hover img:nth-child(4) {
+      transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0) scale3d(-1,-1,1);
+      animation: glitch-anim-3-horizontal var(--time-anim) infinite linear alternate;
+    }
+
+    #social a:hover img:nth-child(5) {
+      animation: glitch-anim-flash 0.5s steps(1,end) infinite;
     }
 
     {{#each brands}}
-    #social a:hover img.brand-{{this.className}} {
+    #social a.brand-{{this.className}} img:nth-child(1),
+    #social a.brand-{{this.className}} img:nth-child(5) {
       -webkit-filter: {{this.filter}};
       filter: {{this.filter}};
     }
@@ -219,27 +311,25 @@
 <section id="social">
   <ul>
     {{#each links}}
+      {{#with this as | link | }}
     <li>
-      <a href="{{this.value}}" title="Connect with {{../name}} on {{this.key}}">
-        <img alt="{{name}} on {{this.key}} brand color"
-             {{#if this.color}}class="brand-{{this.key}}"{{/if}}
-             src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.18.0/{{#if this.icon
-             }}{{this.icon}}{{else}}{{this.key}}{{/if}}.svg" />
-        <img alt="{{name}} on {{this.key}} mono"
-             class="mono"
-             src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.18.0/{{#if this.icon
-             }}{{this.icon}}{{else}}{{this.key}}{{/if}}.svg" />
-        <img alt="{{name}} on {{this.key}} mono"
-             class="mono"
-             src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.18.0/{{#if this.icon
-             }}{{this.icon}}{{else}}{{this.key}}{{/if}}.svg" />
+      <a href="{{link.value}}"
+         title="Connect with {{../name}} on {{link.key}}"
+         {{#if link.color}}class="brand-{{link.key}}"{{/if}}
+      >
+        {{#each ../glitches}}
+        <img alt="{{../name}} on {{link.key}} {{#if @first}}visible{{else}}mono{{/if}}"
+             src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.18.0/{{#if link.icon
+             }}{{link.icon}}{{else}}{{link.key}}{{/if}}.svg" />
+        {{/each}}
       </a>
     </li>
+      {{/with}}
     {{/each}}
   </ul>
 </section>
 
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+{{#if analytics}}
 <script>
   window.ga = function () {
     ga.q.push(arguments)
@@ -252,6 +342,7 @@
   ga('send', 'pageview')
 </script>
 <script src="https://www.google-analytics.com/analytics.js" async></script>
+{{/if}}
 </body>
 
 </html>

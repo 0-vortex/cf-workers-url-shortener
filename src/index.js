@@ -34,12 +34,14 @@ const handleRequest = async request => {
         });
 
         const html = index({
-          name: 'TED Vortex',
-          analytics: '123456',
-          background: 'rgba(24,23,23,1)',
-          typography: 'rgba(255,255,255,1)',
-          primary: 'rgba(184,15,10,1)',
-          secondary: 'rgba(15,82,186,1)',
+          name: NAME,
+          analytics: GA,
+          background: BG,
+          size: SIZE,
+          gap: GAP,
+          margin: MARGIN,
+          duration: DURATION,
+          glitches: [...new Array(5)],
           links,
           brands,
         });
